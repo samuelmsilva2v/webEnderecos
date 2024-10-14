@@ -1,1 +1,42 @@
-<p>cadastrar-endereco works!</p>
+<h3>Cadastro de endereços</h3>
+<p>Preencha os campos para incluir um endereço</p>
+
+<form>
+
+    <div class="mb-3">
+        <label for="logradouro">Logradouro:</label><br>
+        <input type="text" id="logradouro" name="logradouro" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="numero">Número:</label><br>
+        <input type="text" id="numero" name="numero" required>
+    </div>
+    
+    <div class="mb-3">
+        <label for="complemento">Complemento:</label><br>
+        <input type="text" id="complemento" name="complemento">
+    </div>
+    
+    <div class="mb-3">
+        <label for="bairro">Bairro:</label><br>
+        <input type="text" id="bairro" name="bairro" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="cidade">Cidade:</label><br>
+        <input type="text" id="cidade" name="cidade" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="uf">UF:</label><br>
+        <input type="text" id="uf" name="uf" maxlength="2" placeholder="RJ" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="cep">CEP:</label><br>
+        <input type="text" id="cep" name="cep" pattern="\d{5}-?\d{3}" placeholder="00000-000" required>
+    </div>
+
+    <input type="submit" class="btn btn-success" value="Cadastrar Endereço">
+</form>

@@ -9,7 +9,7 @@ export const routes: Routes = [
         component: CadastrarEnderecoComponent
     },
     {
-        path: 'app/consultar-endereco',
+        path: 'app/consultar-enderecos',
         component: ConsultarEnderecosComponent
     },
     {
