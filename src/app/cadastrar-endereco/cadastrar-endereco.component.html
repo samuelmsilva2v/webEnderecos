@@ -1,42 +1,46 @@
 <h3>Cadastro de endereços</h3>
 <p>Preencha os campos para incluir um endereço</p>
 
-<form>
+<div *ngIf="mensagem" class="alert alert-primary">
+    <strong> {{mensagem }}</strong>
+</div>
+
+<form [formGroup]="formulario" (ngSubmit)="cadastrarEndereco()">
 
     <div class="mb-3">
-        <label for="logradouro">Logradouro:</label><br>
-        <input type="text" id="logradouro" name="logradouro" required>
+        <label for="logradouro">Logradouro: </label><br>
+        <input type="text" formControlName="logradouro">
     </div>
 
     <div class="mb-3">
         <label for="numero">Número:</label><br>
-        <input type="text" id="numero" name="numero" required>
+        <input type="text" formControlName="numero">
     </div>
     
     <div class="mb-3">
         <label for="complemento">Complemento:</label><br>
-        <input type="text" id="complemento" name="complemento">
+        <input type="text" formControlName="complemento">
     </div>
     
     <div class="mb-3">
         <label for="bairro">Bairro:</label><br>
-        <input type="text" id="bairro" name="bairro" required>
+        <input type="text" formControlName="bairro">
     </div>
 
     <div class="mb-3">
         <label for="cidade">Cidade:</label><br>
-        <input type="text" id="cidade" name="cidade" required>
+        <input type="text" formControlName="cidade">
     </div>
 
     <div class="mb-3">
         <label for="uf">UF:</label><br>
-        <input type="text" id="uf" name="uf" maxlength="2" placeholder="RJ" required>
+        <input type="text" maxlength="2" placeholder="RJ" formControlName="uf">
     </div>
 
     <div class="mb-3">
         <label for="cep">CEP:</label><br>
-        <input type="text" id="cep" name="cep" pattern="\d{5}-?\d{3}" placeholder="00000-000" required>
+        <input type="text" pattern="\d{5}-?\d{3}" placeholder="00000-000" formControlName="cep">
     </div>
 
-    <input type="submit" class="btn btn-success" value="Cadastrar Endereço">
+    <input type="submit" class="btn btn-success" value="Cadastrar Endereço" [disabled]="formulario.invalid">
 </form>
