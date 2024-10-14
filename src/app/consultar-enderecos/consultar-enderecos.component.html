@@ -18,14 +18,14 @@
         </thead>
 
         <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+            <tr *ngFor="let e of enderecos">
+                <td> {{ e.logradouro }} </td>
+                <td> {{ e.numero }} </td>
+                <td> {{ e.complemento }} </td>
+                <td> {{ e.bairro }} </td>
+                <td> {{ e.cidade }} </td>
+                <td> {{ e.uf }} </td>
+                <td> {{ e.cep }} </td>
                 <td>
                     <button class="btn btn-sm btn-primary me-1">Editar</button>
                     <button class="btn btn-sm btn-danger me-1">Excluir</button>
@@ -35,7 +35,7 @@
 
         <tfoot>
             <tr>
-                <td colspan="8">Quantidade de clientes: </td>
+                <td colspan="8">Quantidade de clientes: {{ enderecos.length }}</td>
             </tr>
         </tfoot>
 
