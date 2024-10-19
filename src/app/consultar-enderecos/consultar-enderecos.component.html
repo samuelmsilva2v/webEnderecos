@@ -1,6 +1,10 @@
 <h3>Consulta de endereços</h3>
 <p>Listagem de endereços cadastrados no sistema</p>
 
+<div class="text-center">
+    <pagination-controls previousLabel="Página anterior" nextLabel="Próxima página" (pageChange)="handlePageChange($event)"/>
+</div>
+
 <div class="table-responsive">
     <table class="table table-sm">
         
@@ -18,7 +22,7 @@
         </thead>
 
         <tbody>
-            <tr *ngFor="let e of enderecos">
+            <tr *ngFor="let e of enderecos | paginate: { itemsPerPage: 5, currentPage: paginador}">
                 <td> {{ e.logradouro }} </td>
                 <td> {{ e.numero }} </td>
                 <td> {{ e.complemento }} </td>
