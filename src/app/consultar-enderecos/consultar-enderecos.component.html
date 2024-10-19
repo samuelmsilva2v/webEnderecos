@@ -35,7 +35,7 @@
                 <td> {{ e.uf | uppercase}} </td>
                 <td> {{ e.cep | mask: '00000-000' }} </td>
                 <td>
-                    <button class="btn btn-sm btn-primary me-1">Editar</button>
+                    <button class="btn btn-sm btn-primary me-1" [routerLink]="['/app/editar-endereco', e.id]">Editar</button>
                     <button class="btn btn-sm btn-danger me-1" (click)="excluirEndereco(e.id)">Excluir</button>
                 </td>
             </tr>

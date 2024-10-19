@@ -13,7 +13,11 @@ export const routes: Routes = [
         component: ConsultarEnderecosComponent
     },
     {
-        path: 'app/editar-endereco',
+        path: 'app/editar-endereco/:id',
         component: EditarEnderecoComponent
     },
+    {
+        path: '', pathMatch: 'full',
+        redirectTo: '/app/consultar-clientes'
+    }
 ];

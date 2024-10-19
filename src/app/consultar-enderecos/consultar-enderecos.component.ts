@@ -1,13 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
 import { NgxPaginationModule } from 'ngx-pagination';
 
 @Component({
   selector: 'app-consultar-enderecos',
   standalone: true,
-  imports: [CommonModule, NgxMaskDirective, NgxMaskPipe, NgxPaginationModule],
+  imports: [CommonModule, NgxMaskDirective, NgxMaskPipe, NgxPaginationModule, RouterLink],
   providers:[provideNgxMask()],
   templateUrl: './consultar-enderecos.component.html',
   styleUrl: './consultar-enderecos.component.css'
