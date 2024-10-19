@@ -16,18 +16,29 @@ export class ConsultarEnderecosComponent {
 
   enderecos: any[] = [];
   paginador: number = 1;
+  mensagem: string = '';
 
   constructor(
     private httpClient: HttpClient
   ) {}
 
   ngOnInit() {
-
     this.httpClient.get('http://localhost:8080/api/enderecos').subscribe({
       next: (resposta) => {
         this.enderecos = resposta as any[];
       }
     })
+  }
+
+  excluirEndereco(id: string) {
+    if(confirm('Deseja realmente excluir o endereço selecionado?')) {
+      this.httpClient.delete('http://localhost:8080/api/enderecos/' + id, { responseType: 'text' }).subscribe({
+        next: (resposta) => {
+          this.mensagem = resposta;
+          this.ngOnInit();
+        }
+      })
+    }
   }
 
   handlePageChange(event: any) {

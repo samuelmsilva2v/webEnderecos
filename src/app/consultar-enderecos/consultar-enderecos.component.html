@@ -1,6 +1,10 @@
 <h3>Consulta de endereços</h3>
 <p>Listagem de endereços cadastrados no sistema</p>
 
+<div *ngIf="mensagem" class="alert alert-primary">
+    <strong> {{ mensagem }} </strong>
+</div>
+
 <div class="text-center">
     <pagination-controls previousLabel="Página anterior" nextLabel="Próxima página" (pageChange)="handlePageChange($event)"/>
 </div>
@@ -22,17 +26,17 @@
         </thead>
 
         <tbody>
-            <tr *ngFor="let e of enderecos | paginate: { itemsPerPage: 5, currentPage: paginador}">
-                <td> {{ e.logradouro }} </td>
-                <td> {{ e.numero }} </td>
-                <td> {{ e.complemento }} </td>
-                <td> {{ e.bairro }} </td>
-                <td> {{ e.cidade }} </td>
+            <tr *ngFor="let e of enderecos | paginate: { itemsPerPage: 10, currentPage: paginador}">
+                <td> {{ e.logradouro | uppercase }} </td>
+                <td> {{ e.numero | uppercase }} </td>
+                <td> {{ e.complemento | uppercase }} </td>
+                <td> {{ e.bairro | uppercase }} </td>
+                <td> {{ e.cidade | uppercase }} </td>
                 <td> {{ e.uf | uppercase}} </td>
                 <td> {{ e.cep | mask: '00000-000' }} </td>
                 <td>
                     <button class="btn btn-sm btn-primary me-1">Editar</button>
-                    <button class="btn btn-sm btn-danger me-1">Excluir</button>
+                    <button class="btn btn-sm btn-danger me-1" (click)="excluirEndereco(e.id)">Excluir</button>
                 </td>
             </tr>
         </tbody>
