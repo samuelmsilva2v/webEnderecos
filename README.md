@@ -1,27 +1,109 @@
-# WebEnderecos
+# Web Endereços
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.7.
+[🇺🇸 Read in English](#web-addresses)
 
-## Development server
+## Descrição
+Este é um projeto de front-end desenvolvido com **Angular**. O objetivo do projeto é desenvolver uma aplicação para gerenciamento de endereços.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Tecnologias
+O projeto utiliza as seguintes tecnologias:
 
-## Code scaffolding
+- **Angular**
+- **TypeScript**
+- **Reactive Forms**
+- **HttpClient**
+- **Ngx Mask**
+- **NGX Pagination Module**
+- **Bootstrap**
+- **Angular CLI**
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Pré-requisitos
 
-## Build
+Certifique-se de ter os seguintes itens instalados em sua máquina antes de rodar o projeto:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- [Node.js](https://nodejs.org/) (versão recomendada: 16.x ou superior)
+- [Angular CLI](https://angular.io/cli) (versão recomendada: 14.x ou superior)
+- [npm](https://www.npmjs.com/) (gerenciador de pacotes)
 
-## Running unit tests
+## Instalação
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clone este repositório para o seu computador:
 
-## Running end-to-end tests
+    ```bash
+    git clone https://github.com/samuelmsilva2v/webEnderecos.git
+    cd webEnderecos
+    ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+2. Instale as dependências do projeto:
 
-## Further help
+    ```bash
+    npm install
+    ```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Rodando o projeto
+Após a instalação das dependências, execute o projeto:
+
+```bash
+$ ng s -o 
+```
+
+Isso irá iniciar o servidor de desenvolvimento na URL http://localhost:4200/. Você pode abrir seu navegador e acessar essa URL para visualizar a aplicação.
+
+![](https://github.com/samuelmsilva2v/assets/blob/main/apiEnderecos/Captura%20de%20tela%202024-12-18%20144955.png)
+![](https://github.com/samuelmsilva2v/assets/blob/main/apiEnderecos/Captura%20de%20tela%202024-12-18%20145011.png)
+
+---
+
+# Web Addresses
+
+[🇧🇷 Leia em Português](#web-endereços) 
+
+## Description
+This is a front-end project developed with **Angular**. The purpose of the project is to create an application for address management.
+
+## Technologies
+The project uses the following technologies:
+
+- **Angular**
+- **TypeScript**
+- **Reactive Forms**
+- **HttpClient**
+- **Ngx Mask**
+- **NGX Pagination Module**
+- **Bootstrap**
+- **Angular CLI**
+
+## Prerequisites
+
+Make sure you have the following tools installed on your machine before running the project: 
+
+- [Node.js](https://nodejs.org/) 
+- [Angular CLI](https://angular.io/cli) 
+- [npm](https://www.npmjs.com/)
+
+## Installation
+
+1. Clone this repository to your computer:
+
+    ```bash
+    git clone https://github.com/samuelmsilva2v/webEnderecos.git
+    cd webEnderecos
+    ```
+
+2. Install the project dependencies:
+
+    ```bash
+    npm install
+    ```
+
+## Running the Project / Rodando o Projeto
+After installing the dependencies, run the project:
+
+```bash
+ng serve -o
+```
+
+This will start the development server at http://localhost:4200/. You can open your browser and access this URL to view the application.
+
+![](https://github.com/samuelmsilva2v/assets/blob/main/apiEnderecos/Captura%20de%20tela%202024-12-18%20144955.png)
+![](https://github.com/samuelmsilva2v/assets/blob/main/apiEnderecos/Captura%20de%20tela%202024-12-18%20145011.png)
