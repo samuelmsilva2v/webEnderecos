@@ -96,7 +96,7 @@ Make sure you have the following tools installed on your machine before running 
     npm install
     ```
 
-## Running the Project / Rodando o Projeto
+## Running the Project
 After installing the dependencies, run the project:
 
 ```bash
